@@ -2093,3 +2093,409 @@ body.dark-mode .highlight-year {
         padding: 1rem;
     }
 }
+
+/* ===== PERSONAL BEST TIMES SECTION - AMAZING DESIGN ===== */
+
+.pb-section {
+    margin-bottom: 3rem;
+}
+
+.pb-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pb-header h2 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    animation: slideDown 0.6s ease-out;
+}
+
+.pb-header h2 i {
+    font-size: 2.5rem;
+}
+
+.pb-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* ===== TABS ===== */
+.pb-tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.pb-tab-btn {
+    padding: 1rem 2rem;
+    border: 2px solid var(--border-color);
+    background: white;
+    color: var(--light-text);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.pb-tab-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.pb-tab-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3);
+}
+
+.pb-tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.pb-tab-content.active {
+    display: block;
+}
+
+/* ===== STROKE SECTIONS ===== */
+.stroke-section {
+    margin-bottom: 3rem;
+}
+
+.stroke-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--border-color);
+}
+
+.stroke-title i {
+    font-size: 1.8rem;
+}
+
+.stroke-title h3 {
+    margin: 0;
+    color: var(--light-text);
+    font-size: 1.8rem;
+}
+
+/* ===== TIME CARDS GRID ===== */
+.pb-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.time-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 15px;
+    padding: 1.8rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.time-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.time-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 102, 204, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.time-card-header {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.time-display {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0, 168, 232, 0.1);
+}
+
+.time-year {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.time-details {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    color: #555;
+    transition: var(--transition);
+}
+
+.detail-item i {
+    font-size: 0.9rem;
+}
+
+.detail-item.record {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    font-weight: 600;
+}
+
+.time-card:hover .detail-item {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* ===== INFO BANNER ===== */
+.pb-info-banner {
+    margin-top: 3rem;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    border-left: 5px solid var(--primary-color);
+}
+
+.info-banner-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.info-banner-content i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.info-banner-content h4 {
+    color: var(--primary-color);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.info-banner-content p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===== DARK MODE FOR PB SECTION ===== */
+body.dark-mode .time-card {
+    background: linear-gradient(135deg, #16213e 0%, #0f0f23 100%);
+    border-color: #0066cc;
+}
+
+body.dark-mode .time-card-header {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .time-display {
+    color: #00d4ff;
+}
+
+body.dark-mode .time-year {
+    color: #999;
+}
+
+body.dark-mode .detail-item {
+    background: #0f0f23;
+    color: #b0b0b0;
+}
+
+body.dark-mode .time-card:hover .detail-item {
+    background: var(--secondary-color);
+    color: #1a1a2e;
+}
+
+body.dark-mode .pb-tab-btn {
+    background: #0f0f23;
+    color: #e0e0e0;
+    border-color: #0066cc;
+}
+
+body.dark-mode .pb-tab-btn:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+body.dark-mode .pb-tab-btn.active {
+    background: linear-gradient(135deg, var(--secondary-color), #00a8e8);
+}
+
+body.dark-mode .stroke-title {
+    border-bottom-color: #0066cc;
+}
+
+body.dark-mode .stroke-title h3 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .pb-info-banner {
+    background: linear-gradient(135deg, #0f0f2380 0%, #16213e80 100%);
+    border-left-color: var(--secondary-color);
+}
+
+body.dark-mode .info-banner-content i {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .info-banner-content h4 {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .info-banner-content p {
+    color: #b0b0b0;
+}
+
+body.dark-mode .pb-subtitle {
+    color: #999;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .pb-header h2 {
+        font-size: 2rem;
+    }
+
+    .pb-header h2 i {
+        font-size: 1.8rem;
+    }
+
+    .pb-subtitle {
+        font-size: 1rem;
+    }
+
+    .pb-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .time-display {
+        font-size: 2.2rem;
+    }
+
+    .pb-tabs {
+        gap: 0.8rem;
+    }
+
+    .pb-tab-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .info-banner-content {
+        flex-direction: column;
+    }
+
+    .info-banner-content i {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .pb-header h2 {
+        font-size: 1.6rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .pb-header h2 i {
+        font-size: 1.5rem;
+    }
+
+    .pb-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .time-card {
+        padding: 1.5rem;
+    }
+
+    .time-card-header {
+        font-size: 1rem;
+    }
+
+    .time-display {
+        font-size: 2rem;
+    }
+
+    .pb-tabs {
+        flex-direction: column;
+    }
+
+    .pb-tab-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .time-details {
+        flex-direction: column;
+    }
+
+    .detail-item {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .pb-info-banner {
+        padding: 1.5rem;
+    }
+
+    .info-banner-content {
+        gap: 1rem;
+    }
+
+    .stroke-title {
+        gap: 0.8rem;
+    }
+
+    .stroke-title i {
+        font-size: 1.5rem;
+    }
+
+    .stroke-title h3 {
+        font-size: 1.4rem;
+    }
+}
