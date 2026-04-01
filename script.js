@@ -319,3 +319,31 @@ window.addEventListener('load', () => {
 console.log('%c🏊 Welcome to Sahal Harunani\'s Portfolio! 🏊', 'color: #0066cc; font-size: 20px; font-weight: bold;');
 console.log('%cFollow me on Instagram: @sahal_harunani08', 'color: #00a8e8; font-size: 14px;');
 console.log('%cLinkedIn: linkedin.com/in/sahal-harunani-387bb63b5', 'color: #00a8e8; font-size: 14px;');
+
+// ===== PB TABS FUNCTIONALITY =====
+document.querySelectorAll('.pb-tab-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const tabName = this.getAttribute('data-tab');
+        
+        // Remove active class from all buttons
+        document.querySelectorAll('.pb-tab-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Remove active class from all tab contents
+        document.querySelectorAll('.pb-tab-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Add active class to corresponding tab content
+        document.getElementById(tabName).classList.add('active');
+    });
+});
+
+// Set first tab as active on page load
+window.addEventListener('load', function() {
+    document.querySelector('.pb-tab-btn').click();
+});
