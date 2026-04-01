@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swimming Achievements - Sahal Harunani</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">SH</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="swimming.html" class="nav-link active">Swimming</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="activities.html" class="nav-link">Activities</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Swimming Journey</h1>
+        <p>From Fear to Excellence - A Remarkable Story</p>
+    </section>
+
+    <section class="swimming-content">
+        <div class="journey-timeline">
+            <h2>My Swimming Journey</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-marker">2012</div>
+                <div class="timeline-content">
+                    <h3>Age 4: The Beginning</h3>
+                    <p>Started at Bluefins Swim Club in Dar-es-Salaam. I was terrified of water initially, but with my parents' support, I joined the Nemo group and began my transformation.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">2013</div>
+                <div class="timeline-content">
+                    <h3>Age 5: Growing Confidence</h3>
+                    <p>Promoted to Ducklings group. Became more confident and eager for training. Participated in my first inter-school competition at Al Muntazir.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">2014</div>
+                <div class="timeline-content">
+                    <h3>Age 6: Competitive Start</h3>
+                    <p>Promoted to Starfish group. Started competing in national competitions as the youngest from my club. Won my first medals this year!</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">2016</div>
+                <div class="timeline-content">
+                    <h3>Age 8: Elite Group</h3>
+                    <p>Promoted to the top Dolphins group. Won my first trophy. Medal count increased significantly. Started getting recognized by Tanzania Swimming Association.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">2019</div>
+                <div class="timeline-content">
+                    <h3>Age 11: National Team Selection</h3>
+                    <p>Selected for Tanzanian National Swimming Team! Represented Tanzania in CANA Zone 3 African Championships in Nairobi, Kenya.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="achievements-section">
+            <h2>Major Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>250+ Medals</h3>
+                    <p>National and international competitions</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>14 Trophies</h3>
+                    <p>Various age groups and events</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-flag"></i>
+                    <h3>National Record</h3>
+                    <p>400m Individual Medley: 5:24.53 (Set 2024)</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>International Competitions</h3>
+                    <p>Multiple African Championships represented</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="competitions-section">
+            <h2>International Competitions</h2>
+            <ul class="competitions-list">
+                <li>15th Africa Aquatics Junior Championships (Mauritius)</li>
+                <li>16th Africa Aquatics Junior Championships (Cairo, Egypt)</li>
+                <li>7th Africa Aquatics Zone III Championships (Dar-es-Salaam, Tanzania)</li>
+                <li>8th Africa Aquatics Zone III Championships (Kigali, Rwanda) - First International Medal</li>
+                <li>9th Africa Aquatics Zone III Championships (Bujumbura, Burundi)</li>
+                <li>10th Africa Aquatics Zone III Championships (Nairobi, Kenya)</li>
+            </ul>
+        </div>
+
+        <div class="blog-section">
+            <h2>Swimming Philosophy</h2>
+            <div class="philosophy-card">
+                <p class="philosophy-text">"I am a person who never accepts defeat in anything regardless of what I do. I always like to win and be the top in everything. Whenever I go for trainings, I consistently go with a fresh mind, ready to achieve my goals. I always try to be focused, put in my maximum effort, and make sure that I feel the pain, cause that is the way I will improve in my swimming."</p>
+            </div>
+        </div>
+
+        <div class="pb-section">
+            <h2>Personal Best Times</h2>
+            <p class="pb-intro">My times have vastly improved from when I started competitive swimming. Every millisecond counts in the pool!</p>
+            <div class="search-box-pb">
+                <input type="text" id="event-search" placeholder="Search swimming events..." class="search-input">
+                <button id="search-btn" class="search-btn">
+                    <i class="fas fa-search"></i> Find
+                </button>
+            </div>
+            <div id="pb-results" class="pb-grid">
+                <p class="loading">Load your times from SwimCloud and they'll appear here!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Sahal Harunani. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/sahal_harunani08" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/sahal-harunani-387bb63b5" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:shalharunani@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/255787596678" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
