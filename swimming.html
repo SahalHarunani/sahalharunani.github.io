@@ -132,15 +132,293 @@
 
         <div class="pb-section">
             <h2>Personal Best Times</h2>
-            <p class="pb-intro">My times have vastly improved from when I started competitive swimming. Every millisecond counts in the pool!</p>
-            <div class="search-box-pb">
-                <input type="text" id="event-search" placeholder="Search swimming events..." class="search-input">
-                <button id="search-btn" class="search-btn">
-                    <i class="fas fa-search"></i> Find
-                </button>
+            <p class="pb-intro">My best times across all swimming events in both short course (25m) and long course (50m) pools. Every millisecond counts in competitive swimming!</p>
+            
+            <div class="pb-tables-container">
+                <!-- Short Course Table -->
+                <div class="pb-table-card">
+                    <div class="pool-type-header">
+                        <i class="fas fa-water"></i>
+                        <h3>Short Course (25m Pool)</h3>
+                    </div>
+                    <table class="pb-table">
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Time</th>
+                                <th>Year</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Freestyle Events -->
+                            <tr class="stroke-header">
+                                <td colspan="4"><strong>Freestyle</strong></td>
+                            </tr>
+                            <tr>
+                                <td>50m Freestyle</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>100m Freestyle</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>200m Freestyle</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>400m Freestyle</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+
+                            <!-- Backstroke Events -->
+                            <tr class="stroke-header">
+                                <td colspan="4"><strong>Backstroke</strong></td>
+                            </tr>
+                            <tr>
+                                <td>50m Backstroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>100m Backstroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>200m Backstroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+
+                            <!-- Breaststroke Events -->
+                            <tr class="stroke-header">
+                                <td colspan="4"><strong>Breaststroke</strong></td>
+                            </tr>
+                            <tr>
+                                <td>50m Breaststroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>100m Breaststroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>200m Breaststroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+
+                            <!-- Butterfly Events -->
+                            <tr class="stroke-header">
+                                <td colspan="4"><strong>Butterfly</strong></td>
+                            </tr>
+                            <tr>
+                                <td>50m Butterfly</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>100m Butterfly</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>200m Butterfly</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+
+                            <!-- Individual Medley Events -->
+                            <tr class="stroke-header">
+                                <td colspan="4"><strong>Individual Medley</strong></td>
+                            </tr>
+                            <tr>
+                                <td>200m Individual Medley</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>400m Individual Medley</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Long Course Table -->
+                <div class="pb-table-card">
+                    <div class="pool-type-header long-course">
+                        <i class="fas fa-water"></i>
+                        <h3>Long Course (50m Pool)</h3>
+                    </div>
+                    <table class="pb-table">
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Time</th>
+                                <th>Year</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Freestyle Events -->
+                            <tr class="stroke-header">
+                                <td colspan="4"><strong>Freestyle</strong></td>
+                            </tr>
+                            <tr>
+                                <td>50m Freestyle</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>100m Freestyle</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>200m Freestyle</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>400m Freestyle</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>800m Freestyle</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>1500m Freestyle</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+
+                            <!-- Backstroke Events -->
+                            <tr class="stroke-header">
+                                <td colspan="4"><strong>Backstroke</strong></td>
+                            </tr>
+                            <tr>
+                                <td>50m Backstroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>100m Backstroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>200m Backstroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+
+                            <!-- Breaststroke Events -->
+                            <tr class="stroke-header">
+                                <td colspan="4"><strong>Breaststroke</strong></td>
+                            </tr>
+                            <tr>
+                                <td>50m Breaststroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>100m Breaststroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>200m Breaststroke</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+
+                            <!-- Butterfly Events -->
+                            <tr class="stroke-header">
+                                <td colspan="4"><strong>Butterfly</strong></td>
+                            </tr>
+                            <tr>
+                                <td>50m Butterfly</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>100m Butterfly</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>200m Butterfly</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+
+                            <!-- Individual Medley Events -->
+                            <tr class="stroke-header">
+                                <td colspan="4"><strong>Individual Medley</strong></td>
+                            </tr>
+                            <tr>
+                                <td>200m Individual Medley</td>
+                                <td class="time-cell">--:--</td>
+                                <td>--</td>
+                                <td><span class="status-badge">Add Time</span></td>
+                            </tr>
+                            <tr>
+                                <td>400m Individual Medley</td>
+                                <td class="time-cell record">5:24.53</td>
+                                <td>2024</td>
+                                <td><span class="status-badge record">National Record</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div id="pb-results" class="pb-grid">
-                <p class="loading">Load your times from SwimCloud and they'll appear here!</p>
+
+            <div class="pb-info-box">
+                <i class="fas fa-info-circle"></i>
+                <p><strong>How to Update Your Times:</strong> Replace the "--:--" placeholders with your actual best times from SwimCloud. The table shows all standard Olympic and non-Olympic events organized by stroke type and pool size.</p>
             </div>
         </div>
     </section>
