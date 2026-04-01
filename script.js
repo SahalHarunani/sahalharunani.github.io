@@ -142,74 +142,36 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-// ===== Swimming PB Search =====
-// Sample swimming times data (you can expand this)
-const swimmingTimes = {
-    'freestyle': [
-        { event: '50m Freestyle', time: '25.43', course: 'short' },
-        { event: '100m Freestyle', time: '55.21', course: 'short' },
-        { event: '200m Freestyle', time: '2:02.15', course: 'short' },
-    ],
-    'backstroke': [
-        { event: '50m Backstroke', time: '28.95', course: 'short' },
-        { event: '100m Backstroke', time: '1:00.42', course: 'short' },
-    ],
-    'breaststroke': [
-        { event: '50m Breaststroke', time: '31.18', course: 'short' },
-        { event: '100m Breaststroke', time: '1:09.53', course: 'short' },
-    ],
-    'butterfly': [
-        { event: '50m Butterfly', time: '27.64', course: 'short' },
-        { event: '100m Butterfly', time: '1:02.31', course: 'short' },
-    ],
-    'medley': [
-        { event: '200m Individual Medley', time: '2:15.42', course: 'short' },
-        { event: '400m Individual Medley', time: '5:24.53', course: 'long' },
-    ]
-};
-
-const searchBtn = document.getElementById('search-btn');
-const eventSearch = document.getElementById('event-search');
-
-if (searchBtn && eventSearch) {
-    searchBtn.addEventListener('click', searchSwimmingTimes);
-    eventSearch.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') searchSwimmingTimes();
-    });
-}
-
-function searchSwimmingTimes() {
-    const query = eventSearch.value.toLowerCase().trim();
-    const resultsContainer = document.getElementById('pb-results');
-
-    if (!query) {
-        resultsContainer.innerHTML = '<p class="loading">Please enter a search term...</p>';
-        return;
-    }
-
-    let results = [];
-    
-    for (let category in swimmingTimes) {
-        swimmingTimes[category].forEach(time => {
-            if (time.event.toLowerCase().includes(query) || category.includes(query)) {
-                results.push(time);
-            }
+// ===== PB TABS FUNCTIONALITY =====
+document.querySelectorAll('.pb-tab-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const tabName = this.getAttribute('data-tab');
+        
+        // Remove active class from all buttons
+        document.querySelectorAll('.pb-tab-btn').forEach(btn => {
+            btn.classList.remove('active');
         });
-    }
+        
+        // Remove active class from all tab contents
+        document.querySelectorAll('.pb-tab-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Add active class to corresponding tab content
+        document.getElementById(tabName).classList.add('active');
+    });
+});
 
-    if (results.length === 0) {
-        resultsContainer.innerHTML = '<p class="loading">No times found matching your search.</p>';
-        return;
+// Set first tab as active on page load
+window.addEventListener('load', function() {
+    const firstTab = document.querySelector('.pb-tab-btn');
+    if (firstTab) {
+        firstTab.click();
     }
-
-    resultsContainer.innerHTML = results.map(time => `
-        <div class="pb-card">
-            <h4>${time.event}</h4>
-            <p class="pb-time">${time.time}</p>
-            <p><small>${time.course === 'long' ? '50m Pool (Long Course)' : '25m Pool (Short Course)'}</small></p>
-        </div>
-    `).join('');
-}
+});
 
 // ===== Smooth Scrolling =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -320,30 +282,4 @@ console.log('%c🏊 Welcome to Sahal Harunani\'s Portfolio! 🏊', 'color: #0066
 console.log('%cFollow me on Instagram: @sahal_harunani08', 'color: #00a8e8; font-size: 14px;');
 console.log('%cLinkedIn: linkedin.com/in/sahal-harunani-387bb63b5', 'color: #00a8e8; font-size: 14px;');
 
-// ===== PB TABS FUNCTIONALITY =====
-document.querySelectorAll('.pb-tab-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const tabName = this.getAttribute('data-tab');
-        
-        // Remove active class from all buttons
-        document.querySelectorAll('.pb-tab-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        
-        // Remove active class from all tab contents
-        document.querySelectorAll('.pb-tab-content').forEach(content => {
-            content.classList.remove('active');
-        });
-        
-        // Add active class to clicked button
-        this.classList.add('active');
-        
-        // Add active class to corresponding tab content
-        document.getElementById(tabName).classList.add('active');
-    });
-});
 
-// Set first tab as active on page load
-window.addEventListener('load', function() {
-    document.querySelector('.pb-tab-btn').click();
-});
