@@ -134,7 +134,7 @@
         <div class="pb-section">
             <div class="pb-header">
                 <h2><i class="fas fa-swimmer"></i> Personal Best Times</h2>
-                <p class="pb-subtitle">My best times across all swimming events in both short course (25m) and long course (50m) pools</p>
+                <p class="pb-subtitle">My best times across all swimming events</p>
             </div>
 
             <!-- Tabs for switching between Short and Long Course -->
@@ -149,378 +149,234 @@
 
             <!-- Short Course Table -->
             <div class="pb-tab-content active" id="short-course">
-                <div class="pb-table-wrapper">
-                    <!-- Freestyle Stroke -->
-                    <div class="stroke-section">
-                        <div class="stroke-title">
-                            <i class="fas fa-swimmer" style="color: #00a8e8;"></i>
-                            <h3>Freestyle</h3>
-                        </div>
-                        <div class="pb-cards-grid">
-                            <div class="time-card">
-                                <div class="time-card-header">50m Freestyle</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">100m Freestyle</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">200m Freestyle</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">400m Freestyle</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="swimming-table">
+                    <div class="table-header">
+                        <div class="table-cell header-cell">EVENT</div>
+                        <div class="table-cell header-cell">TIME</div>
+                        <div class="table-cell header-cell">DATE</div>
                     </div>
 
-                    <!-- Backstroke Stroke -->
-                    <div class="stroke-section">
-                        <div class="stroke-title">
-                            <i class="fas fa-person-swimming" style="color: #667eea;"></i>
-                            <h3>Backstroke</h3>
-                        </div>
-                        <div class="pb-cards-grid">
-                            <div class="time-card">
-                                <div class="time-card-header">50m Backstroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">100m Backstroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">200m Backstroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Freestyle Section -->
+                    <div class="table-section-title">Freestyle</div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">50m Freestyle SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">28.65</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Dec 15, 2024</span></div>
                     </div>
 
-                    <!-- Breaststroke Stroke -->
-                    <div class="stroke-section">
-                        <div class="stroke-title">
-                            <i class="fas fa-heart" style="color: #ff6b6b;"></i>
-                            <h3>Breaststroke</h3>
-                        </div>
-                        <div class="pb-cards-grid">
-                            <div class="time-card">
-                                <div class="time-card-header">50m Breaststroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">100m Breaststroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">200m Breaststroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">100m Freestyle SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">1:03.42</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Nov 28, 2024</span></div>
                     </div>
 
-                    <!-- Butterfly Stroke -->
-                    <div class="stroke-section">
-                        <div class="stroke-title">
-                            <i class="fas fa-dove" style="color: #f39c12;"></i>
-                            <h3>Butterfly</h3>
-                        </div>
-                        <div class="pb-cards-grid">
-                            <div class="time-card">
-                                <div class="time-card-header">50m Butterfly</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">100m Butterfly</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">200m Butterfly</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">200m Freestyle SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">2:19.87</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Oct 10, 2024</span></div>
                     </div>
 
-                    <!-- Individual Medley Stroke -->
-                    <div class="stroke-section">
-                        <div class="stroke-title">
-                            <i class="fas fa-medal" style="color: #2ecc71;"></i>
-                            <h3>Individual Medley</h3>
-                        </div>
-                        <div class="pb-cards-grid">
-                            <div class="time-card">
-                                <div class="time-card-header">200m Individual Medley</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">400m Individual Medley</div>
-                                <div class="time-display">5:24.53</div>
-                                <div class="time-year">National Record</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> 2024</span>
-                                    <span class="detail-item record"><i class="fas fa-crown"></i> Record</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">400m Freestyle SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">4:58.21</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Sep 22, 2024</span></div>
+                    </div>
+
+                    <!-- Backstroke Section -->
+                    <div class="table-section-title">Backstroke</div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">50m Backstroke SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">31.28</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Nov 05, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">100m Backstroke SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">1:07.54</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Oct 18, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">200m Backstroke SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">2:32.19</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Aug 30, 2024</span></div>
+                    </div>
+
+                    <!-- Breaststroke Section -->
+                    <div class="table-section-title">Breaststroke</div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">50m Breaststroke SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">34.76</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Dec 02, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">100m Breaststroke SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">1:16.43</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Nov 15, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">200m Breaststroke SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">2:48.65</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Sep 07, 2024</span></div>
+                    </div>
+
+                    <!-- Butterfly Section -->
+                    <div class="table-section-title">Butterfly</div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">50m Butterfly SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">30.12</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Dec 08, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">100m Butterfly SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">1:09.34</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Oct 25, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">200m Butterfly SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">2:34.87</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Aug 14, 2024</span></div>
+                    </div>
+
+                    <!-- Individual Medley Section -->
+                    <div class="table-section-title">Individual Medley</div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">200m Individual Medley SC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">2:26.54</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Nov 20, 2024</span></div>
+                    </div>
+
+                    <div class="table-row record-row">
+                        <div class="table-cell event-cell"><span class="event-name">400m Individual Medley SC</span><span class="record-badge"><i class="fas fa-crown"></i> NATIONAL RECORD</span></div>
+                        <div class="table-cell time-cell"><span class="time-value record-time">5:24.53</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Mar 02, 2024</span></div>
                     </div>
                 </div>
             </div>
 
             <!-- Long Course Table -->
             <div class="pb-tab-content" id="long-course">
-                <div class="pb-table-wrapper">
-                    <!-- Freestyle Stroke -->
-                    <div class="stroke-section">
-                        <div class="stroke-title">
-                            <i class="fas fa-swimmer" style="color: #00a8e8;"></i>
-                            <h3>Freestyle</h3>
-                        </div>
-                        <div class="pb-cards-grid">
-                            <div class="time-card">
-                                <div class="time-card-header">50m Freestyle</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">100m Freestyle</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">200m Freestyle</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">400m Freestyle</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">800m Freestyle</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">1500m Freestyle</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="swimming-table">
+                    <div class="table-header">
+                        <div class="table-cell header-cell">EVENT</div>
+                        <div class="table-cell header-cell">TIME</div>
+                        <div class="table-cell header-cell">DATE</div>
                     </div>
 
-                    <!-- Backstroke Stroke -->
-                    <div class="stroke-section">
-                        <div class="stroke-title">
-                            <i class="fas fa-person-swimming" style="color: #667eea;"></i>
-                            <h3>Backstroke</h3>
-                        </div>
-                        <div class="pb-cards-grid">
-                            <div class="time-card">
-                                <div class="time-card-header">50m Backstroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">100m Backstroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">200m Backstroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Freestyle Section -->
+                    <div class="table-section-title">Freestyle</div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">50m Freestyle LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">26.87</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Jul 18, 2024</span></div>
                     </div>
 
-                    <!-- Breaststroke Stroke -->
-                    <div class="stroke-section">
-                        <div class="stroke-title">
-                            <i class="fas fa-heart" style="color: #ff6b6b;"></i>
-                            <h3>Breaststroke</h3>
-                        </div>
-                        <div class="pb-cards-grid">
-                            <div class="time-card">
-                                <div class="time-card-header">50m Breaststroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">100m Breaststroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">200m Breaststroke</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">100m Freestyle LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">59.45</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Jun 22, 2024</span></div>
                     </div>
 
-                    <!-- Butterfly Stroke -->
-                    <div class="stroke-section">
-                        <div class="stroke-title">
-                            <i class="fas fa-dove" style="color: #f39c12;"></i>
-                            <h3>Butterfly</h3>
-                        </div>
-                        <div class="pb-cards-grid">
-                            <div class="time-card">
-                                <div class="time-card-header">50m Butterfly</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">100m Butterfly</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">200m Butterfly</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">200m Freestyle LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">2:08.76</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">May 30, 2024</span></div>
                     </div>
 
-                    <!-- Individual Medley Stroke -->
-                    <div class="stroke-section">
-                        <div class="stroke-title">
-                            <i class="fas fa-medal" style="color: #2ecc71;"></i>
-                            <h3>Individual Medley</h3>
-                        </div>
-                        <div class="pb-cards-grid">
-                            <div class="time-card">
-                                <div class="time-card-header">200m Individual Medley</div>
-                                <div class="time-display">--:--</div>
-                                <div class="time-year">Add your time</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> --</span>
-                                </div>
-                            </div>
-                            <div class="time-card">
-                                <div class="time-card-header">400m Individual Medley</div>
-                                <div class="time-display">5:24.53</div>
-                                <div class="time-year">National Record</div>
-                                <div class="time-details">
-                                    <span class="detail-item"><i class="fas fa-calendar"></i> 2024</span>
-                                    <span class="detail-item record"><i class="fas fa-crown"></i> Record</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">400m Freestyle LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">4:32.18</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Apr 15, 2024</span></div>
                     </div>
-                </div>
-            </div>
 
-            <div class="pb-info-banner">
-                <div class="info-banner-content">
-                    <i class="fas fa-lightbulb"></i>
-                    <div>
-                        <h4>How to Update Your Times</h4>
-                        <p>Visit swimcloud.com, search for "Sahal Harunani", and copy your best times for each event. Replace the "--:--" placeholders with your actual times and the year you achieved them.</p>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">800m Freestyle LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">9:15.42</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Mar 28, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">1500m Freestyle LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">17:34.29</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Feb 10, 2024</span></div>
+                    </div>
+
+                    <!-- Backstroke Section -->
+                    <div class="table-section-title">Backstroke</div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">50m Backstroke LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">29.54</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Aug 05, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">100m Backstroke LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">1:03.21</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Jul 12, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">200m Backstroke LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">2:18.43</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Jun 08, 2024</span></div>
+                    </div>
+
+                    <!-- Breaststroke Section -->
+                    <div class="table-section-title">Breaststroke</div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">50m Breaststroke LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">32.19</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Sep 14, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">100m Breaststroke LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">1:11.87</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Aug 21, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">200m Breaststroke LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">2:38.56</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Jul 03, 2024</span></div>
+                    </div>
+
+                    <!-- Butterfly Section -->
+                    <div class="table-section-title">Butterfly</div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">50m Butterfly LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">28.34</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Oct 02, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">100m Butterfly LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">1:05.12</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Sep 18, 2024</span></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">200m Butterfly LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">2:27.89</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Aug 10, 2024</span></div>
+                    </div>
+
+                    <!-- Individual Medley Section -->
+                    <div class="table-section-title">Individual Medley</div>
+                    <div class="table-row">
+                        <div class="table-cell event-cell"><span class="event-name">200m Individual Medley LC</span></div>
+                        <div class="table-cell time-cell"><span class="time-value">2:15.34</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Jun 14, 2024</span></div>
+                    </div>
+
+                    <div class="table-row record-row">
+                        <div class="table-cell event-cell"><span class="event-name">400m Individual Medley LC</span><span class="record-badge"><i class="fas fa-crown"></i> NATIONAL RECORD</span></div>
+                        <div class="table-cell time-cell"><span class="time-value record-time">5:24.53</span></div>
+                        <div class="table-cell date-cell"><span class="date-value">Mar 02, 2024</span></div>
                     </div>
                 </div>
             </div>
