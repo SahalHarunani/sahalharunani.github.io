@@ -282,4 +282,218 @@ console.log('%c🏊 Welcome to Sahal Harunani\'s Portfolio! 🏊', 'color: #0066
 console.log('%cFollow me on Instagram: @sahal_harunani08', 'color: #00a8e8; font-size: 14px;');
 console.log('%cLinkedIn: linkedin.com/in/sahal-harunani-387bb63b5', 'color: #00a8e8; font-size: 14px;');
 
+// ===== GLOBAL SEARCH FUNCTIONALITY =====
+
+// Search data structure
+const searchableContent = [
+    {
+        title: "Home",
+        category: "Page",
+        url: "index.html",
+        keywords: ["home", "portfolio", "sahal", "harunani"]
+    },
+    {
+        title: "About Me",
+        category: "Page",
+        url: "about.html",
+        keywords: ["about", "biography", "personal", "introduction", "florida", "tanzania", "languages"]
+    },
+    {
+        title: "Swimming",
+        category: "Page",
+        url: "swimming.html",
+        keywords: ["swimming", "achievements", "medals", "records", "freestyle", "backstroke", "breaststroke", "butterfly", "medley", "bluefins", "national team"]
+    },
+    {
+        title: "Education",
+        category: "Page",
+        url: "education.html",
+        keywords: ["education", "school", "grades", "igcse", "a-levels", "biochemistry", "maths", "chemistry", "biology"]
+    },
+    {
+        title: "Activities",
+        category: "Page",
+        url: "activities.html",
+        keywords: ["activities", "leo club", "mun", "volunteering", "leadership", "service", "community"]
+    },
+    {
+        title: "Gallery",
+        category: "Page",
+        url: "gallery.html",
+        keywords: ["gallery", "photos", "images", "pictures"]
+    },
+    {
+        title: "Contact",
+        category: "Page",
+        url: "contact.html",
+        keywords: ["contact", "email", "whatsapp", "instagram", "linkedin", "message"]
+    },
+    {
+        title: "National Record - 400m Individual Medley",
+        category: "Achievement",
+        url: "swimming.html",
+        keywords: ["record", "400m", "medley", "5:24.53", "2024", "national", "champion"]
+    },
+    {
+        title: "250+ Medals",
+        category: "Achievement",
+        url: "swimming.html",
+        keywords: ["medals", "competition", "award", "achievement", "250"]
+    },
+    {
+        title: "14 Trophies",
+        category: "Achievement",
+        url: "swimming.html",
+        keywords: ["trophy", "trophies", "14", "award"]
+    },
+    {
+        title: "IGCSE Results",
+        category: "Education",
+        url: "education.html",
+        keywords: ["igcse", "results", "grades", "a*", "mathematics", "chemistry", "ict"]
+    },
+    {
+        title: "A-Levels Studies",
+        category: "Education",
+        url: "education.html",
+        keywords: ["a-level", "mathematics", "chemistry", "biology", "biochemistry"]
+    },
+    {
+        title: "Leo Club Member",
+        category: "Activity",
+        url: "activities.html",
+        keywords: ["leo", "club", "service", "volunteer", "community"]
+    },
+    {
+        title: "Model United Nations",
+        category: "Activity",
+        url: "activities.html",
+        keywords: ["mun", "model", "united", "nations", "delegate", "chair"]
+    },
+    {
+        title: "Tanzanian National Team",
+        category: "Swimming",
+        url: "swimming.html",
+        keywords: ["tanzania", "national", "team", "representative", "aquatics"]
+    },
+    {
+        title: "Bluefins Swim Club",
+        category: "Swimming",
+        url: "swimming.html",
+        keywords: ["bluefins", "club", "dar es salaam", "swim"]
+    }
+];
+
+// DOM Elements
+const globalSearchInput = document.getElementById('global-search');
+const searchBtnNav = document.getElementById('search-btn-nav');
+const searchResultsModal = document.createElement('div');
+
+// Create search results modal
+searchResultsModal.className = 'search-results-modal';
+document.body.appendChild(searchResultsModal);
+
+// Search function
+function performSearch(query) {
+    if (!query.trim()) {
+        searchResultsModal.classList.remove('active');
+        return;
+    }
+
+    const lowerQuery = query.toLowerCase().trim();
+    const results = searchableContent.filter(item => {
+        return item.keywords.some(keyword => keyword.includes(lowerQuery)) ||
+               item.title.toLowerCase().includes(lowerQuery) ||
+               item.category.toLowerCase().includes(lowerQuery);
+    });
+
+    displaySearchResults(results, query);
+}
+
+// Display search results
+function displaySearchResults(results, query) {
+    if (results.length === 0) {
+        searchResultsModal.innerHTML = `
+            <div class="search-results-container">
+                <div class="search-results-header">
+                    <h3>Search Results for "${query}"</h3>
+                    <button class="search-close-btn" onclick="closeSearch()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-no-results">
+                    <i class="fas fa-search"></i>
+                    <p>No results found for "${query}"</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Try searching for: pages, achievements, activities, or keywords</p>
+                </div>
+            </div>
+        `;
+    } else {
+        const resultsHTML = results.map(result => `
+            <div class="search-result-item" onclick="window.location.href='${result.url}'">
+                <span class="search-result-category">${result.category}</span>
+                <h4 class="search-result-title">${result.title}</h4>
+                <p class="search-result-text">
+                    <strong>Keywords:</strong> ${result.keywords.slice(0, 3).join(", ")}...
+                </p>
+            </div>
+        `).join('');
+
+        searchResultsModal.innerHTML = `
+            <div class="search-results-container">
+                <div class="search-results-header">
+                    <h3>${results.length} Result${results.length !== 1 ? 's' : ''} found for "${query}"</h3>
+                    <button class="search-close-btn" onclick="closeSearch()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-results-grid">
+                    ${resultsHTML}
+                </div>
+            </div>
+        `;
+    }
+
+    searchResultsModal.classList.add('active');
+}
+
+// Close search results
+function closeSearch() {
+    searchResultsModal.classList.remove('active');
+    globalSearchInput.value = '';
+}
+
+// Event listeners
+searchBtnNav.addEventListener('click', () => {
+    performSearch(globalSearchInput.value);
+});
+
+globalSearchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        performSearch(globalSearchInput.value);
+    }
+});
+
+globalSearchInput.addEventListener('input', (e) => {
+    if (e.target.value.length > 0) {
+        performSearch(e.target.value);
+    } else {
+        searchResultsModal.classList.remove('active');
+    }
+});
+
+// Close search when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.search-box-nav') && !e.target.closest('.search-results-modal')) {
+        searchResultsModal.classList.remove('active');
+    }
+});
+
+// Close search when pressing Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeSearch();
+    }
+});
+
 
