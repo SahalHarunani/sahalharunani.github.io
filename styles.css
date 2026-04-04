@@ -265,7 +265,7 @@ body.dark-mode .highlight-year {
 
 .search-input-nav {
     flex: 1;
-    min-width: 0;  /* 🔥 fixes mobile overflow */
+    min-width: 150;
     border: none;
     background: transparent;
     color: var(--light-text);
