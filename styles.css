@@ -524,13 +524,13 @@ body.dark-mode::after {
 }
 
 /* Responsive Search Box */
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     .search-input-nav {
         min-width: 120px;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
     .search-input-nav {
         min-width: 100px;
     }
