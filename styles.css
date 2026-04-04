@@ -265,7 +265,7 @@ body.dark-mode .highlight-year {
 
 .search-input-nav {
     flex: 1;
-    min-width: 75px;
+    min-width: 150px;
     border: none;
     background: transparent;
     color: var(--light-text);
@@ -282,7 +282,7 @@ body.dark-mode .highlight-year {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border: none;
     color: white;
-    width: 32px;
+    width: 16px;
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
