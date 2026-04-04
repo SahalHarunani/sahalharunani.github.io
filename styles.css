@@ -524,13 +524,13 @@ body.dark-mode::after {
 }
 
 /* Responsive Search Box */
-@media (max-width: 768px) {
+@media (max-width: 120px) {
     .search-input-nav {
         min-width: 120px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 120px) {
     .search-input-nav {
         min-width: 100px;
     }
@@ -550,7 +550,7 @@ body.dark-mode::after {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 120px) {
     .search-box-nav {
         display: flex;
         min-width: 200px;
@@ -593,7 +593,7 @@ body.dark-mode::after {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 120px) {
     .search-box-nav {
         display: flex;
         width: 100%;
