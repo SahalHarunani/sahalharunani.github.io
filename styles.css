@@ -282,7 +282,7 @@ body.dark-mode .highlight-year {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border: none;
     color: white;
-    width: 16px;
+    width: 32px;
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
