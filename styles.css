@@ -548,7 +548,7 @@ body.dark-mode::after {
 
     .search-input-nav {
         flex: 1;
-        min-width: 0;  /* 🔥 prevents overflow */
+        min-width: 0;  /* 🔥 fixes mobile overflow */
         font-size: 0.85rem;
     }
 
