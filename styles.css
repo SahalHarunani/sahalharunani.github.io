@@ -541,10 +541,10 @@ body.dark-mode::after {
 
     .search-box-nav {
         display: flex;
-        flex: 0 1 140px;   /* 🔥 controls width */
-        max-width: 140px;
-        padding: 0.2rem 0.4rem;
-    }
+       flex: 1;              /* 🔥 allows it to grow */
+    max-width: 220px;     /* controls max size */
+    margin: 0 0.5rem;     /* adds space on both sides */
+}
 
     .search-input-nav {
         flex: 1;
