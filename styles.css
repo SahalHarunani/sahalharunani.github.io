@@ -553,7 +553,7 @@ body.dark-mode::after {
 @media (max-width: 768px) {
     .search-box-nav {
         display: flex;
-        min-width: 200px;
+        min-width: 100px;
         order: 3;
     }
 
@@ -597,7 +597,7 @@ body.dark-mode::after {
     .search-box-nav {
         display: flex;
         width: 100%;
-        max-width: 250px;
+        max-width: 100px;
         margin-bottom: 0.5rem;
     }
 
