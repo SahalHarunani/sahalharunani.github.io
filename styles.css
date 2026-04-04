@@ -649,7 +649,7 @@ body.dark-mode::after {
     }
 }
 
-@media (max-width: 200px) {
+@media (max-width: 100px) {
     .nav-container {
         padding: 0 0.8rem;
     }
