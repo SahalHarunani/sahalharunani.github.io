@@ -659,7 +659,7 @@ body.dark-mode::after {
     }
 
     .search-box-nav {
-        min-width: 150px;
+        min-width: 100px;
     }
 
     .search-input-nav {
