@@ -533,18 +533,18 @@ body.dark-mode::after {
         flex-wrap: nowrap; /* ❗ keep everything in one line */
     }
 
-   .nav-controls {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;  /* 🔥 more breathing room */
-}
+    .nav-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
 
     .search-box-nav {
         display: flex;
-       flex: 1;              /* 🔥 allows it to grow */
-    max-width: 220px;     /* controls max size */
-    margin: 0 0.5rem;     /* adds space on both sides */
-}
+        flex: 0 1 140px;   /* 🔥 controls width */
+        max-width: 140px;
+        padding: 0.2rem 0.4rem;
+    }
 
     .search-input-nav {
         flex: 1;
@@ -573,10 +573,6 @@ body.dark-mode::after {
     .search-results-grid {
         grid-template-columns: 1fr;
     }
-}
-.theme-toggle,
-.menu-toggle {
-    flex-shrink: 0;  /* ❗ stops them from shrinking */
 }
 
 /* ===== Buttons ===== */
