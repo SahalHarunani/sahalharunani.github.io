@@ -264,7 +264,7 @@ body.dark-mode .highlight-year {
 }
 
 .search-input-nav {
-    flex: 1;
+    flex: 0 1 auto;
     min-width: 150px;
     border: none;
     background: transparent;
