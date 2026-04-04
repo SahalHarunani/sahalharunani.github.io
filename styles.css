@@ -542,7 +542,7 @@ body.dark-mode::after {
     .search-box-nav {
         display: flex;
        flex: 1;              /* 🔥 allows it to grow */
-    max-width: 220px;     /* controls max size */
+    max-width: 180px;     /* controls max size */
     margin: 0 0.5rem;     /* adds space on both sides */
 }
 
