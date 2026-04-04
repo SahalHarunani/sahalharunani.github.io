@@ -526,7 +526,7 @@ body.dark-mode::after {
 /* Responsive Search Box */
 @media (max-width: 768px) {
     .search-input-nav {
-        min-width: 120px;
+        min-width: 100px;
     }
 }
 
@@ -649,7 +649,7 @@ body.dark-mode::after {
     }
 }
 
-@media (max-width: 50px) {
+@media (max-width: 100px) {
     .nav-container {
         padding: 0 0.8rem;
     }
