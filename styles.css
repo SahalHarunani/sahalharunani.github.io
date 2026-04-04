@@ -541,8 +541,8 @@ body.dark-mode::after {
 
     .search-box-nav {
         display: flex;
-        flex: 0 1 140px;   /* 🔥 controls width */
-        max-width: 140px;
+        flex: 0 1 180px;   /* 🔥 controls width */
+        max-width: 180px;
         padding: 0.2rem 0.4rem;
     }
 
