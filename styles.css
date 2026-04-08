@@ -157,7 +157,8 @@ body.dark-mode .highlight-year {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    ba
+    background-clip: text;
+}
 
 .nav-logo a:hover {
     transform: scale(1.1);
