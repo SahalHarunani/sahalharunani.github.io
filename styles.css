@@ -129,11 +129,6 @@ body.dark-mode .highlight-year {
 
 /* ===== Navigation ===== */
 .navbar {
-    
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* keeps everything close */
-    gap: 20px; /* controls space between logo & menu */
     background-color: var(--light-bg);
     padding: 1rem 0;
     box-shadow: var(--shadow);
@@ -154,11 +149,15 @@ body.dark-mode .highlight-year {
 }
 
 .nav-logo a {
-    display: flex;
-    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
     text-decoration: none;
-}
-
+    transition: var(--transition);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    ba
 
 .nav-logo a:hover {
     transform: scale(1.1);
