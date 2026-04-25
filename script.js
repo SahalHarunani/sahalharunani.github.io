@@ -401,10 +401,16 @@ function performSearch(query) {
     }
 
     const lowerQuery = query.toLowerCase().trim();
+
     const results = searchableContent.filter(item => {
-        return item.keywords.some(keyword => keyword.includes(lowerQuery)) ||
-               item.title.toLowerCase().includes(lowerQuery) ||
-               item.category.toLowerCase().includes(lowerQuery);
+        const text = (
+            item.title + " " +
+            item.category + " " +
+            item.keywords.join(" ") + " " +
+            (item.description || "")
+        ).toLowerCase();
+
+        return text.includes(lowerQuery);
     });
 
     displaySearchResults(results, query);
