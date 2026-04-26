@@ -474,6 +474,10 @@ body.dark-mode .search-no-results {
 }
 
 /* ===== ELEGANT BACKGROUND DESIGN ===== */
+body
+{
+    background: linear-gradient(135deg, #eef4ff, #dbeafe);
+}
 body::before {
     content: '';
     position: fixed;
@@ -487,6 +491,9 @@ body::before {
         radial-gradient(circle at 40% 0%, rgba(102, 126, 234, 0.03) 0%, transparent 60%);
     pointer-events: none;
     z-index: -1;
+}
+body.dark-mode {
+    background: linear-gradient(135deg, #0a0f1f, #111827);
 }
 
 body.dark-mode::before {
