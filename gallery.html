@@ -6,6 +6,169 @@
     <title>Gallery - Sahal Harunani</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 75vh;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .lightbox-caption {
+            color: white;
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            background: rgba(0, 0, 0, 0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 5px;
+            transition: var(--transition);
+            z-index: 2001;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .lightbox-prev {
+            left: 20px;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-next {
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        /* Gallery Grid Improvements */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background: white;
+            height: 300px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 102, 204, 0.3);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .gallery-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .gallery-placeholder p {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        body.dark-mode .gallery-item {
+            background: #16213e;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -47,42 +210,36 @@
     </section>
 
     <section class="gallery-content">
-        <p class="gallery-info">
-            <i class="fas fa-image"></i> 
-            Images will be displayed here. Add your photos to the gallery folder to showcase your swimming achievements, events, and milestones.
-        </p>
-
         <div class="gallery-grid" id="gallery">
-            <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <i class="fas fa-camera"></i>
-                    <p>Swimming Competitions</p>
-                </div>
+            <!-- Image 1: Competition Ready -->
+            <div class="gallery-item" data-index="0">
+                <img src="images/gallery-1-competition-ready.jpg" alt="Swimming Competitions" class="gallery-image" onerror="this.parentElement.innerHTML='<div class=\"gallery-placeholder\"><i class=\"fas fa-camera\"></i><p>Swimming Competitions</p></div>'">
             </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <i class="fas fa-camera"></i>
-                    <p>Achievement Moments</p>
-                </div>
+
+            <!-- Image 2: Diving Start -->
+            <div class="gallery-item" data-index="1">
+                <img src="images/gallery-2-diving-start.jpg" alt="Achievement Moments" class="gallery-image" onerror="this.parentElement.innerHTML='<div class=\"gallery-placeholder\"><i class=\"fas fa-camera\"></i><p>Achievement Moments</p></div>'">
             </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <i class="fas fa-camera"></i>
-                    <p>International Competitions</p>
-                </div>
+
+            <!-- Image 3: Butterfly Stroke -->
+            <div class="gallery-item" data-index="2">
+                <img src="images/gallery-3-butterfly-stroke.jpg" alt="International Competitions" class="gallery-image" onerror="this.parentElement.innerHTML='<div class=\"gallery-placeholder\"><i class=\"fas fa-camera\"></i><p>International Competitions</p></div>'">
             </div>
-            <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <i class="fas fa-camera"></i>
-                    <p>Team Photos</p>
-                </div>
+
+            <!-- Image 4: Butterfly Competition -->
+            <div class="gallery-item" data-index="3">
+                <img src="images/gallery-4-butterfly-competition.jpg" alt="Team Photos" class="gallery-image" onerror="this.parentElement.innerHTML='<div class=\"gallery-placeholder\"><i class=\"fas fa-camera\"></i><p>Team Photos</p></div>'">
             </div>
+
+            <!-- Placeholder: Awards & Recognition -->
             <div class="gallery-item">
                 <div class="gallery-placeholder">
                     <i class="fas fa-camera"></i>
                     <p>Awards & Recognition</p>
                 </div>
             </div>
+
+            <!-- Placeholder: Events & Activities -->
             <div class="gallery-item">
                 <div class="gallery-placeholder">
                     <i class="fas fa-camera"></i>
@@ -90,9 +247,24 @@
                 </div>
             </div>
         </div>
-
-        
     </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img id="lightboxImage" class="lightbox-image" src="" alt="">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-content">
@@ -115,5 +287,72 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Lightbox functionality
+        const galleryItems = document.querySelectorAll('.gallery-item[data-index]');
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        let currentIndex = 0;
+
+        const captions = [
+            "Competition Ready - Preparing for the race",
+            "Diving Start - Perfect execution at the starting block",
+            "Butterfly Stroke - Powerful and graceful technique",
+            "Butterfly Competition - In full flow during the race"
+        ];
+
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                openLightbox(index);
+            });
+        });
+
+        function openLightbox(index) {
+            const img = galleryItems[index].querySelector('img');
+            if (img && !img.hasAttribute('onerror-triggered')) {
+                lightboxImage.src = img.src;
+                lightboxCaption.textContent = captions[index] || img.alt;
+                lightboxModal.classList.add('active');
+            }
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.remove('active');
+        }
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            openLightbox(currentIndex);
+        }
+
+        function showPrevImage() {
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            openLightbox(currentIndex);
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxNext.addEventListener('click', showNextImage);
+        lightboxPrev.addEventListener('click', showPrevImage);
+
+        // Close lightbox when clicking outside the image
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightboxModal.classList.contains('active')) return;
+            if (e.key === 'ArrowLeft') showPrevImage();
+            if (e.key === 'ArrowRight') showNextImage();
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
 </body>
 </html>
